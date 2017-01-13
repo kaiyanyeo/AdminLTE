@@ -1578,6 +1578,9 @@ a:focus {
 .box.box-plain {
   border-top-color: #ffffff;
 }
+.box.box-details {
+  margin-bottom: 2px;
+}
 .box.collapsed-box .box-body,
 .box.collapsed-box .box-footer {
   display: none;
