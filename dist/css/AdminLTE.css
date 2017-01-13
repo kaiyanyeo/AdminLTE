@@ -1575,6 +1575,9 @@ a:focus {
 .box.box-default {
   border-top-color: #d2d6de;
 }
+.box.box-plain {
+  border-top-color: #ffffff;
+}
 .box.collapsed-box .box-body,
 .box.collapsed-box .box-footer {
   display: none;
@@ -3032,8 +3035,8 @@ table.text-center th {
   position: relative;
 }
 .widget-user .widget-user-header {
-  padding: 20px;
-  height: 120px;
+  padding: 10px;
+  height: 200px;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
 }
