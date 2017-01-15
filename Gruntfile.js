@@ -6,7 +6,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     watch: {
       html: {
-        files: ["index.html"],
+        files: ["index.html", "screens/*.html"],
         tasks: [],
         options: {livereload: true}
       },
