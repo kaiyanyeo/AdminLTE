@@ -1,5 +1,5 @@
 # About
-This repository contains the code for the static screens of a customer portal for an imaginary healthcare focused portal. This repository and its contents are adapted from [AdminLTE]("https://almsaeedstudio.com/themes/AdminLTE/index.html"), of which the documentation and source code are available [here]("https://github.com/almasaeed2010/AdminLTE").
+This repository contains the code for the static screens for an imaginary healthcare focused portal. This repository and its contents are adapted from [AdminLTE]("https://almsaeedstudio.com/themes/AdminLTE/index.html"), of which the documentation and source code are available [here]("https://github.com/almasaeed2010/AdminLTE").
 
 ## Pages
 All pages are from the perspective of a patient using the portal or from the perspective of a family member using the portal to facilitate procedures for the patient.
