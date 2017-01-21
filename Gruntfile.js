@@ -200,7 +200,7 @@ module.exports = function (grunt) {
   // Linting task
   grunt.registerTask('lint', ['jshint', 'csslint', 'bootlint']);
 
-  grunt.registerTask('server', ['express', 'newer:watch:html']);
+  grunt.registerTask('server', ['express', 'newer:watch:html', 'newer:watch:less']);
 
   // The default task (running "grunt" in console) is "watch"
   grunt.registerTask('default', ['watch']);
