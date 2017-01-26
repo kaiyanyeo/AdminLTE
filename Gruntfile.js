@@ -5,9 +5,26 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     watch: {
-      // If any .less file changes in directory "build/less/" run the "less"-task.
-      files: ["build/less/*.less", "build/less/skins/*.less", "dist/js/app.js"],
-      tasks: ["less", "uglify"]
+      html: {
+        files: ["index.html", "screens/*.html"],
+        tasks: [],
+        options: {livereload: true}
+      },
+      less: {
+        // If any .less file changes in directory "build/less/" run the "less"-task.
+        files: ["build/less/*.less", "build/less/skins/*.less", "dist/js/app.js"],
+        tasks: ["less", "uglify"]
+      }
+    },
+    express: {
+      all: {
+        options: {
+          port: 8001,
+          hostname: 'localhost',
+          bases: ['.'],
+          livereload: true
+        }
+      }
     },
     // "less"-task configuration
     // This task will compile all less files upon saving to create both AdminLTE.css and AdminLTE.min.css
@@ -176,8 +193,14 @@ module.exports = function (grunt) {
   // Lint Bootstrap
   grunt.loadNpmTasks('grunt-bootlint');
 
+  grunt.loadNpmTasks('grunt-express');
+
+  grunt.loadNpmTasks('grunt-newer');
+
   // Linting task
   grunt.registerTask('lint', ['jshint', 'csslint', 'bootlint']);
+
+  grunt.registerTask('server', ['express', 'newer:watch:html', 'newer:watch:less']);
 
   // The default task (running "grunt" in console) is "watch"
   grunt.registerTask('default', ['watch']);
